@@ -100,7 +100,7 @@ jobs:
         run: |
             export CF_USER=${{ secrets.BTP_USERNAME }}
             export CF_PASSWORD=${{ secrets.BTP_PASSWORD }}
-            export TF_VAR_project_name=${{ steps.output_issue_data.outputs.project-name }}
+            export TF_VAR_project_name='${{ steps.output_issue_data.outputs.project-name }}'
             export TF_VAR_subaccount_stage=${{ steps.output_issue_data.outputs.subaccount-stage }}
             export TF_VAR_cf_org_id=${{ steps.terraform_output_btp.outputs.cf_org_id }}
             export TF_VAR_cf_api_url=${{ steps.terraform_output_btp.outputs.cf_api_url }}
