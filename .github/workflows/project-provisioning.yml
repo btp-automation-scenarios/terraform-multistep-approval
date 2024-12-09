@@ -69,7 +69,7 @@ jobs:
         run: |
           terraform -chdir=${{ env.PATH_TO_TFSCRIPT_BTP }} init -no-color
 
-      - name: Terraform Apply for BTP and Store Output
+      - name: Terraform Apply for BTP
         shell: bash
         run: |
             export BTP_USERNAME=${{ secrets.BTP_USERNAME }}
@@ -95,7 +95,7 @@ jobs:
         run: |
           terraform -chdir=${{ env.PATH_TO_TFSCRIPT_CF }} init -no-color
 
-      - name: Terraform Apply for CF and Store Output
+      - name: Terraform Apply for CF
         shell: bash
         run: |
             export CF_USER=${{ secrets.BTP_USERNAME }}
@@ -121,7 +121,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            The subaccount for the project has been created successfully.
+            The subaccount for the project has been created successfully 🎉
 
             Here is the relevant information for the project team:
 
@@ -129,4 +129,4 @@ jobs:
               CF API URL: ${{ steps.terraform_output_btp.outputs.cf_api_url }}
               CF Space URL: ${{ steps.terraform_output_cf.outputs.cf_space_url }}
 
-            Build some awesome stuff with it!
+            🚀 Build some awesome apps with it!
