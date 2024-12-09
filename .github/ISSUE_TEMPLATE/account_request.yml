@@ -1,5 +1,5 @@
-name: Subaccount Request
-description: 🛠️ File a request to create a project subaccount
+name: 🛠️ Subaccount Request
+description: File a request to create a project subaccount
 title: "[ACCOUNT REQUEST]"
 labels: [account-request]
 body:
