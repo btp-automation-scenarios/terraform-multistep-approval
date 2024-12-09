@@ -1,4 +1,4 @@
-# Multi-step deployment with Review
+# Multi-step deployment with review
 
 ## Goal
 
